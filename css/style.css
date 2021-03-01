@@ -52,7 +52,7 @@ hr {background: #E24747;width: 150px;height: 4px;margin: 20px auto;border: none;
 /*------------------------------------*/
 
 .philosophy{padding-top: 100px;}
-.yellow-color{color: #FF7602;}
+.orange-color{color: #FF7602;}
 .wrapper{width: 100%;}
 .feature-box {text-align: right;cursor: default;display: block;height: auto;left: 0;margin-top: 30px;}
 .feature-box .feature-texts {margin-right: 100px;}
@@ -66,7 +66,8 @@ hr {background: #E24747;width: 150px;height: 4px;margin: 20px auto;border: none;
 .callto-action h3{font-size: 32px;font-weight: 700; color: #fff;}
 .callto-action p{margin: 0;}
 .callto-action a{background: #fff;border-radius: 8px;padding: 10px 20px;font-size: 16px;color: #57B407;font-weight: 600;font-family: 'Prompt', sans-serif;display: inline-block;}
-.guide{padding: 100px 0;line-height: 28px;background: #FDFAF6;}
+.light-gray-bg{background: #FDFAF6;}
+.guide{padding: 100px 0;line-height: 28px;}
 .guide h3{font-size: 32px;font-weight: 700;line-height: 44px;margin-bottom: 15px;}
 .guide h4{font-size: 20px;font-weight: 700;margin-bottom: 10px;margin-top: 15px;}
 .green-button{background: #57B407;color: #fff;font-size: 16px;font-weight: 600;font-family: 'Prompt', sans-serif;padding: 12px 24px;border-radius: 8px;display: inline-block;}
@@ -82,7 +83,7 @@ hr {background: #E24747;width: 150px;height: 4px;margin: 20px auto;border: none;
 .value .color-boxes:nth-child(2) .value-box{background: #FFCA00;}
 .value .color-boxes:nth-child(3) .value-box{background: #F08E3B;}
 .value .color-boxes:nth-child(4) .value-box{background: #E24747;}
-.testimonial{background: #FDFAF6;padding: 100px 0 150px;}
+.testimonial{padding: 100px 0 150px;}
 .testimonial .jcarousel-wrapper{margin-top: 70px;}
 .jcarousel .testimonials-slide{background: #F08E3B;color: #fff;padding: 40px;border-radius: 16px;}
 .jcarousel li .testimonials-slide{margin: 0 15px;}
@@ -118,3 +119,122 @@ footer .footer-link ul li a::before{content: "\f0da";font: normal normal normal 
 .search input[type="text"]{padding: 10px;height: 46px;margin-bottom: 10px;}
 .search input[type="submit"]{border: 0;height: 50px;}
 .search input[type="submit"]:focus{background: #57B407;}
+.breadcrumb{background: url(../images/breadcrumb-bg.jpg) center center / cover;position: relative;min-height: 112px;margin: 0;}
+.breadcrumb::before{background-color: rgba(255,202,0,0.95);position: absolute;content: "";top: 0;left: 0;width: 100%;height:100%;}
+.breadcrumb h3{font-size: 24px;font-weight: 600;color: #341D56;margin: 0;}
+.breadcrumb ul{text-align: right;}
+.breadcrumb ul li{display: inline-block;color: #4D4D4D;}
+.breadcrumb ul li a{color: #4D4D4D;}
+.breadcrumb ul li::after{content: "\f054";font: normal normal normal 14px/1 FontAwesome;margin: 0 8px 0 13px;}
+.breadcrumb ul li:last-child::after{display: none;}
+.badge{position: absolute;top: 0;left: 20px;}
+.shadow1{box-shadow: 14px .5rem 1rem rgba(0,0,0,.2) !important;}
+.our-classes{padding: 100px 0;}
+.tag-line{color: #E24747;font-family: font-family: 'Prompt', sans-serif;font-weight: 600;margin-bottom: 8px;}
+.cms-classes-grid .grid-item-inner {
+    -webkit-transition: all .3s linear 0ms;
+    -khtml-transition: all .3s linear 0ms;
+    -moz-transition: all .3s linear 0ms;
+    -ms-transition: all .3s linear 0ms;
+    -o-transition: all .3s linear 0ms;
+    transition: all .3s linear 0ms;
+    -webkit-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+.cms-classes-grid .classes-item {
+    -webkit-border-radius: 25px;
+    -khtml-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid rgba(119,119,119,.18);
+    overflow: hidden;
+    background-color: #fff;
+}
+.cms-classes-grid .classes-item .entry-featured {
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 15px;
+}
+.elementor img {
+    height: auto;
+    max-width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+ .cms-classes-grid .classes-item .entry-featured::after {
+    display: block;
+    content: "";
+    position: absolute;
+}
+.classes-item .entry-featured::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-repeat: repeat-x;
+    background-image: url(https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/themes/kindori/assets/css/../images/img-dotted.png);
+}
+.cms-classes-grid .classes-item .entry-body {
+    text-align: center;
+    padding: 15px 25px 27px;
+}
+.cms-classes-grid .classes-item .entry-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.cms-classes-grid .classes-item .entry-content {
+    margin-bottom: 27px;
+    font-size: 15px;
+    line-height: 25px;
+}
+.cms-classes-grid .classes-item .entry-meta {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 17px;
+    border-top: 1px solid rgba(119,119,119,.18);
+}
+.cms-classes-grid .classes-item .entry-meta::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    content: "";
+    opacity: 0;
+    background-color: #ff4880;
+    background-image: -webkit-gradient(linear,left top,right top,from(#ff4880),to(#1ab9ff));
+    background-image: -webkit-linear-gradient(left,#ff4880,#1ab9ff);
+    background-image: -moz-linear-gradient(left,#ff4880,#1ab9ff);
+    background-image: -ms-linear-gradient(left,#ff4880,#1ab9ff);
+    background-image: -o-linear-gradient(left,#ff4880,#1ab9ff);
+    background-image: linear-gradient(left,#ff4880,#1ab9ff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff4880',endColorStr='#1ab9ff',gradientType='1');
+    -webkit-transition: all .3s linear 0ms;
+    -khtml-transition: all .3s linear 0ms;
+    -moz-transition: all .3s linear 0ms;
+    -ms-transition: all .3s linear 0ms;
+    -o-transition: all .3s linear 0ms;
+    transition: all .3s linear 0ms;
+}
+.cms-classes-grid .classes-item .entry-body {
+    text-align: center;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.cms-classes-grid .classes-item .entry-meta .item-box .box-value {
+    font-size: 13px;
+    color: #ff4880;
+}
