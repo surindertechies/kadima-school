@@ -144,7 +144,6 @@ footer .footer-link ul li a::before{content: "\f0da";font: normal normal normal 
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     border-radius: 25px;
-    margin-bottom: 50px;
 }
 .cms-classes-grid .classes-item {
     -webkit-border-radius: 25px;
@@ -182,7 +181,7 @@ footer .footer-link ul li a::before{content: "\f0da";font: normal normal normal 
     width: 100%;
     height: 4px;
     background-repeat: repeat-x;
-    background-image: url(https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/themes/kindori/assets/css/../images/img-dotted.png);
+    background-image: url(../images/waves-img.png);
 }
 .cms-classes-grid .classes-item .entry-body {
     text-align: center;
@@ -204,29 +203,6 @@ footer .footer-link ul li a::before{content: "\f0da";font: normal normal normal 
     padding-top: 17px;
     border-top: 1px solid rgba(119,119,119,.18);
 }
-.cms-classes-grid .classes-item .entry-meta::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    content: "";
-    opacity: 0;
-    background-color: #ff4880;
-    background-image: -webkit-gradient(linear,left top,right top,from(#ff4880),to(#1ab9ff));
-    background-image: -webkit-linear-gradient(left,#ff4880,#1ab9ff);
-    background-image: -moz-linear-gradient(left,#ff4880,#1ab9ff);
-    background-image: -ms-linear-gradient(left,#ff4880,#1ab9ff);
-    background-image: -o-linear-gradient(left,#ff4880,#1ab9ff);
-    background-image: linear-gradient(left,#ff4880,#1ab9ff);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ff4880',endColorStr='#1ab9ff',gradientType='1');
-    -webkit-transition: all .3s linear 0ms;
-    -khtml-transition: all .3s linear 0ms;
-    -moz-transition: all .3s linear 0ms;
-    -ms-transition: all .3s linear 0ms;
-    -o-transition: all .3s linear 0ms;
-    transition: all .3s linear 0ms;
-}
 .cms-classes-grid .classes-item .entry-body {
     text-align: center;
 }
@@ -238,3 +214,22 @@ label {
     font-size: 13px;
     color: #ff4880;
 }
+.cms-classes-grid .classes-item .entry-title a{color: #271344;font-weight: 600;}
+.gallery{padding: 100px 0;}
+.gallery .grid .element-item img{border-radius: 25px;margin: 15px 0;}
+.gallery .filter-button-group button{background: #EEE;color: #341D56;font-size: 16px;font-weight: 600;font-family: 'Prompt', sans-serif;border-radius: 21px;border: 0;padding: 8px 20px;text-transform: uppercase;margin: 0 9px;}
+.gallery .filter-button-group{margin: 30px 0 50px;}
+.post-activities{font-size: 16px;}
+.post-activities h3{font-size: 24px;font-weight: 700;}
+.post-activities .image-box{height: 340px;background-position: center center;background-size: cover;}
+.post-activities .post-content a{position: relative;display: inline-block;color: #57B407;padding-bottom: 2px;font-family: 'Fredoka One',sans-serif;font-weight: 600;font-size: 14px;}
+.post-activities .post-content a i{position: absolute;right: 0;top: 4px;opacity: 0;transition-delay: .20s;}
+.post-activities .post-content:hover a{padding-right: 20px;}
+.post-activities .post-content:hover a i{opacity: 1;transition: 0.4s ease-in-out;}
+.post-activities .post-content a::after{display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #57B407;}
