@@ -42,7 +42,7 @@
     .carousel-control-next, .carousel-control-prev{z-index: 999;width: 8%;}
     .carousel-control-next .arrow-box, .carousel-control-prev .arrow-box{background: none;width: 40px;height: 40px;border-radius: 8px;line-height: 50px;}
     .carousel-indicators{bottom: -20px;}
-    .philosophy, .callto-action, .guide, .value{padding: 50px 0;}
+    .philosophy, .callto-action, .guide, .value, .our-classes, .gallery{padding: 50px 0;}
     .philosophy .row .col-lg-4:nth-child(2){display: none;}
     .feature-box, .feature-box .feature-texts, .copy-right, .copy-right .copy-r{text-align: center;}
     .feature-box .feature-texts, .feature-box.icon-box-left .feature-texts{margin: 0;}
@@ -55,4 +55,10 @@
     .copy-right{padding: 15px 0;}
     .copy-right .copy-r{margin-top: 10px;}
     #banner .green-button {padding: 6px 24px;}
+    .our-classes .jcarousel-control-next1, .our-classes .jcarousel-control-prev1{font-size: 0;}
+    .our-classes .jcarousel-control-next1{right: -10px;} 
+    .our-classes .jcarousel-control-prev1{left: -10px;}
+    .breadcrumb{text-align: center;}
+    .breadcrumb ul{text-align: center;margin-top: 10px;}
+    .gallery .filter-button-group button{margin: 0 9px 20px;}
 }

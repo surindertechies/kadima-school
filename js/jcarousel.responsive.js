@@ -29,6 +29,35 @@
                 target: '+=1'
             });
 
+            //About us
+            $(function() {
+                var jcarousel = $('.our-classes .jcarousel');
+                jcarousel
+                    .on('jcarousel:reload jcarousel:create', function () {
+                        var width = jcarousel.innerWidth();
+
+                        if (width >= 600) {
+                            width = width / 3;
+                        } else if (width >= 350) {
+                            width = width / 1;
+                        }
+                        jcarousel.jcarousel('items').css('width', width + 'px');
+                    })
+                    .jcarousel({
+                        wrap: 'circular'
+                    });
+
+                $('.our-classes .jcarousel-control-prev1')
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+
+                $('.our-classes .jcarousel-control-next1')
+                .jcarouselControl({
+                    target: '+=1'
+                });
+            });
+
         $('.jcarousel-pagination')
             .on('jcarouselpagination:active', 'a', function() {
                 $(this).addClass('active');
