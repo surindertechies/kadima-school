@@ -265,3 +265,8 @@ label {display: inline-block;margin-bottom: .5rem;}
     background-color: #abcd52;
 }
 .our-teacher .green-button{padding: 12px 80px;margin-top: 70px;}
+.our-teacher .grid-item{margin-bottom: 30px;}
+.teachers-banner{background-repeat: no-repeat;background-size: cover;padding: 100px 0;}
+.teachers-banner h2{font-size: 30px;font-weight: 700;margin-bottom: 30px;}
+.become-teacher{padding: 100px 0;line-height: 38px;font-size: 20px;}
+.become-teacher .green-button{padding: 6px 30px;}
