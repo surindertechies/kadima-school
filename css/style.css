@@ -270,3 +270,125 @@ label {display: inline-block;margin-bottom: .5rem;}
 .teachers-banner h2{font-size: 30px;font-weight: 700;margin-bottom: 30px;}
 .become-teacher{padding: 100px 0;line-height: 38px;font-size: 20px;}
 .become-teacher .green-button{padding: 6px 30px;}
+
+.events{padding: 100px 0;}
+.cms-grid .cms-grid-inner, .cms-grid .grid-item-inner {
+    position: relative;
+}
+.grid-item-inner {
+    margin-bottom: 30px;
+    -webkit-border-radius: 18px;
+    -khtml-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(119,119,119,.13);
+    -webkit-transition: all .3s linear 0ms;
+    -khtml-transition: all .3s linear 0ms;
+    -moz-transition: all .3s linear 0ms;
+    -ms-transition: all .3s linear 0ms;
+    -o-transition: all .3s linear 0ms;
+    transition: all .3s linear 0ms;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item {
+    display: flex;
+    -webkit-border-radius: 18px;
+    -khtml-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+    align-items: center;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-featured, .cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-featured img {
+    max-width: 198px;
+    width: 100%;
+    margin-right: 30px;
+    margin-bottom: -1px;
+    margin-top: -1px;
+    margin-left: -1px;
+    overflow: hidden;
+    min-height: 220px;
+    -webkit-border-radius: 18px 0 0 18px;
+    -khtml-border-radius: 18px 0 0 18px;
+    -moz-border-radius: 18px 0 0 18px;
+    -ms-border-radius: 18px 0 0 18px;
+    -o-border-radius: 18px 0 0 18px;
+    border-radius: 18px 0 0 18px;
+    background-size: cover;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-featured {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-body {
+    padding: 10px 15px 15px 0;
+        padding-left: 0px;
+    padding-left: 0;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-body .entry-title {
+    font-size: 20px;
+    margin-bottom: 19px;
+    font-weight: 600;
+}
+.entry-title a {
+    color: inherit;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-meta {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-meta .item-box label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #271344;
+    margin-bottom: 4px;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-meta .item-box.item-box-date i {
+    color: #ff4880;
+}
+grid.layout2 .grid-item-inner .cmsevents-item .entry-meta .item-box label i {
+    width: 15px;
+    margin-right: 5px;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-meta .item-box.item-box-time i {
+    color: #ffc000;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-meta .item-box.item-box-place i {
+    color: #abcd52;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-readmore .btn-more {
+    position: relative;
+    display: inline-block;
+    color: #57B407;
+    padding-bottom: 2px;
+    font-weight: 700;
+    font-family: 'Fredoka One',sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-readmore .btn-more i {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    opacity: 0;
+    transition-delay: .12s;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item:hover .entry-readmore .btn-more {
+    padding-right: 20px;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item:hover .entry-readmore .btn-more i {
+    opacity: 1;
+}
+.cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-readmore .btn-more::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #57B407;
+}
