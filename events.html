@@ -197,25 +197,25 @@
 									<div class="cms-count-down-container font-smooth" id="clockdiv">
 									   <div class="time-item">
 										  <div class="time-item-inner">
-											 <div class="days inner-number"></div>
+											 <div id="days" class="days inner-number"></div>
 											 <div class="inner-text">Days</div>
 										  </div>
 									   </div>
 									   <div class="time-item">
 										  <div class="time-item-inner">
-											 <div class="hours inner-number"></div>
+											 <div id="hours" class="hours inner-number"></div>
 											 <div class="inner-text">Hours</div>
 										  </div>
 									   </div>
 									   <div class="time-item">
 										  <div class="time-item-inner">
-											 <div class="minutes inner-number"></div>
+											 <div id="minutes" class="minutes inner-number"></div>
 											 <div class="inner-text">Minutes</div>
 										  </div>
 									   </div>
 									   <div class="time-item">
 										  <div class="time-item-inner">
-											 <div class="seconds inner-number"></div>
+											 <div id="seconds" class="seconds inner-number"></div>
 											 <div class="inner-text">Seconds</div>
 										  </div>
 									   </div>
@@ -429,47 +429,38 @@
 	<script type="text/javascript" src="js/jcarousel.responsive.js"></script>
 	<script type="text/javascript" src="js/isotope-docs.min.js"></script>
 	<script>
-		function getTimeRemaining(endtime) {
-		const total = Date.parse(endtime) - Date.parse(new Date());
-		const seconds = Math.floor((total / 1000) % 60);
-		const minutes = Math.floor((total / 1000 / 60) % 60);
-		const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-		const days = Math.floor(total / (1000 * 60 * 60 * 24));
-		
-		return {
-			total,
-			days,
-			hours,
-			minutes,
-			seconds
-		};
+		// The data/time we want to countdown to
+		var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+
+		// Run myfunc every second
+		var myfunc = setInterval(function() {
+
+		var now = new Date().getTime();
+		var timeleft = countDownDate - now;
+			
+		// Calculating the days, hours, minutes and seconds left
+		var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+			
+		// Result is output to the specific element
+		document.getElementById("days").innerHTML = days
+		document.getElementById("hours").innerHTML = hours
+		document.getElementById("minutes").innerHTML = minutes 
+		document.getElementById("seconds").innerHTML = seconds 
+			
+		// Display the message when countdown is over
+		if (timeleft < 0) {
+			clearInterval(myfunc);
+			document.getElementById("days").innerHTML = ""
+			document.getElementById("hours").innerHTML = "" 
+			document.getElementById("minutes").innerHTML = ""
+			document.getElementById("seconds").innerHTML = ""
+			document.getElementById("end").innerHTML = "TIME UP!!";
 		}
-		function initializeClock(id, endtime) {
-		const clock = document.getElementById(id);
-		const daysSpan = clock.querySelector('.days');
-		const hoursSpan = clock.querySelector('.hours');
-		const minutesSpan = clock.querySelector('.minutes');
-		const secondsSpan = clock.querySelector('.seconds');
-
-		function updateClock() {
-			const t = getTimeRemaining(endtime);
-
-			daysSpan.innerHTML = t.days;
-			hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-			minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-			secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-			if (t.total <= 0) {
-			clearInterval(timeinterval);
-			}
-		}
-
-		updateClock();
-		const timeinterval = setInterval(updateClock, 1000);
-		}
-
-		const deadline = new Date(Date.parse(new Date()) + 215 * 24 * 60 * 60 * 1000);
-		initializeClock('clockdiv', deadline);
+		}, 1000);
+		</script>
 	</script>
 </body>
 </html>

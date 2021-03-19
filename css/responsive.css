@@ -42,6 +42,7 @@
     .our-teacher .grid-item{margin-bottom: 30px;}
     .our-teacher .green-button{margin-top: 40px;}
     .teachers-banner{background-position: 65% 100%;}
+    .cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-featured{max-width: 158px;}
 }
 @media only screen and (max-device-width:736px) {
     .top-bar .left-side-bar, .top-bar .right-side-bar{float: none;text-align: center;}
