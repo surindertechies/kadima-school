@@ -99,4 +99,8 @@
     .cms-cmsevents-grid.layout2 .grid-item-inner .cmsevents-item .entry-body {
         padding: 35px 20px;
     }
+    .cms-count-down.layout2 .cms-count-down-container .time-item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }

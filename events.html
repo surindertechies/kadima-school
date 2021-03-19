@@ -11,6 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -101,9 +103,11 @@
 						<hr />
 						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a viverra arcu. Nullam ac nisl in<br /> nunc consequat fermentum in in nisi.</p>
 					</div>
-					<!--events-box-->
+				</div>
+				<!--events-box-->
 					<div class="cms-grid cms-cmsevents-grid layout2">
 						<div class="cms-grid-inner cms-grid-masonry animation-time">
+							<div class="row">
 							<div class="grid-item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
 								<div class="grid-item-inner">
 									<div class="cmsevents-item">
@@ -169,11 +173,68 @@
 							</div>
 							</div>
 						</div>
+						</div>
 					</div>			 
 					<!--events-box-end-->
 				</div>
 			</div>
 		</section>
+
+		<section class="elementor-section elementor-top-section elementor-element elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" style="background-image: url(images/bg-events-page-title1.jpg);">
+			<div class="elementor-background-overlay"></div>
+			<div class="elementor-container elementor-column-gap-default ">
+			   <div class="elementor-row">
+				  <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+					 <div class="elementor-column-wrap elementor-element-populated">
+						<div class="elementor-widget-wrap">
+						   <div class="elementor-element elementor-widget elementor-widget-cms_countdown_time">
+							  <div class="elementor-widget-container">
+								 <div class="cms-count-down layout2 ">
+									<div class="item-box-title">
+									   <div class="item-date-feature"> October 08, 2021                at                09:00 AM</div>
+									   <h3 class="item--title"> Organize halloween parties for kids</h3>
+									</div>
+									<div class="cms-count-down-container font-smooth" id="clockdiv">
+									   <div class="time-item">
+										  <div class="time-item-inner">
+											 <div class="days inner-number"></div>
+											 <div class="inner-text">Days</div>
+										  </div>
+									   </div>
+									   <div class="time-item">
+										  <div class="time-item-inner">
+											 <div class="hours inner-number"></div>
+											 <div class="inner-text">Hours</div>
+										  </div>
+									   </div>
+									   <div class="time-item">
+										  <div class="time-item-inner">
+											 <div class="minutes inner-number"></div>
+											 <div class="inner-text">Minutes</div>
+										  </div>
+									   </div>
+									   <div class="time-item">
+										  <div class="time-item-inner">
+											 <div class="seconds inner-number"></div>
+											 <div class="inner-text">Seconds</div>
+										  </div>
+									   </div>
+									</div>
+								 </div>
+							  </div>
+						   </div>
+						   <div class="elementor-element elementor-widget elementor-widget-cms_button" data-id="4b730fde" data-element_type="widget" data-widget_type="cms_button.default">
+							  <div class="elementor-widget-container">
+								 <div id="cms_button-4b730fde" class="cms-button-wrapper cms-button-layout1 "> <a class="pink-button" href="#" target="_blank"> <span class="btn-text"> View All Events </span> </a></div>
+							  </div>
+						   </div>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		</section>
+		 
 		<section class="our-teacher cms-team-grid1">
 			<div class="container">
 				<div class="cms-grid-inner cms-grid-masonry row justify-content-center">
@@ -367,5 +428,48 @@
 	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="js/jcarousel.responsive.js"></script>
 	<script type="text/javascript" src="js/isotope-docs.min.js"></script>
+	<script>
+		function getTimeRemaining(endtime) {
+		const total = Date.parse(endtime) - Date.parse(new Date());
+		const seconds = Math.floor((total / 1000) % 60);
+		const minutes = Math.floor((total / 1000 / 60) % 60);
+		const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+		const days = Math.floor(total / (1000 * 60 * 60 * 24));
+		
+		return {
+			total,
+			days,
+			hours,
+			minutes,
+			seconds
+		};
+		}
+		function initializeClock(id, endtime) {
+		const clock = document.getElementById(id);
+		const daysSpan = clock.querySelector('.days');
+		const hoursSpan = clock.querySelector('.hours');
+		const minutesSpan = clock.querySelector('.minutes');
+		const secondsSpan = clock.querySelector('.seconds');
+
+		function updateClock() {
+			const t = getTimeRemaining(endtime);
+
+			daysSpan.innerHTML = t.days;
+			hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+			minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+			secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+			if (t.total <= 0) {
+			clearInterval(timeinterval);
+			}
+		}
+
+		updateClock();
+		const timeinterval = setInterval(updateClock, 1000);
+		}
+
+		const deadline = new Date(Date.parse(new Date()) + 215 * 24 * 60 * 60 * 1000);
+		initializeClock('clockdiv', deadline);
+	</script>
 </body>
 </html>
